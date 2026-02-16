@@ -1,1 +1,1 @@
-This is the Github for the GUTS preprocessing pipeline
+Notes for the GUTS preprocessing pipeline
