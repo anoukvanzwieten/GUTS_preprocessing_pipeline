@@ -68,6 +68,16 @@ After you have created the configuration files you can connect to irods by click
 of this tutorial. Then, a data transfer interface will pop up. Go to the `Synchronize Data`
 tab to select the folders you want to synchronize.
 
+For WP3, we will input the new subjects in the yoda directory:
+```
+dataGUTS2/GUTS/WP3/Data_collection/
+├── carmen_anouk
+│   ├── BEHAV
+│   ├── bids
+│   ├── PARREC
+│   ├── yoda [this is where the data should be imported]
+```
+
 ### Leonardo's github:
 https://github.com/leonardocerliani/GUTS_fmri_preproc/tree/main/TUT/07_Yoda_iBridges_data_transfer
 
