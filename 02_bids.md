@@ -3,7 +3,8 @@ This workflow describes how to:
 1. Restructure raw YODA data
 2. Run bidsmapper (define mapping)
 3. Run bidscoiner (convert to BIDS)
-4. Validate dataset
+4. Validate the dataset
+5. Deface the data
 
 Link to [Leonardo's github](https://github.com/leonardocerliani/GUTS_fmri_preproc/tree/main/TUT/05_full_pipeline)
 
@@ -145,5 +146,28 @@ The structure should now look like this:
 ## Bidsvalidator
 Now, you can open a browser and search for the [bidsvalidator](https://bids-standard.github.io/bids-validator/) webpage. Upload your bids folder, and check whether there are any errors. Note that you will probably see many Warnings, this is not a problem for now, as long as there are no errors. If there are errors this will likely create issues with fmriprep etc, so fix them before continuing.
 
+## Defacing the data
+Bidscoiner also has a deface [plugin](https://bidscoin.readthedocs.io/en/latest/installation.html). If you have not used it yet, you can install it using:
+```
+pip install bidscoin[pydeface]
+```
 
+Now you can deface a subject of your choice by going to the `anat` folder within the subject folder and defacing the T1 file:
+```
+pydeface subjectid_ses-01_T1w.nii.gz
+```
 
+You can also process multiple subjects in parallel with
+```
+find bids -type f -name "*T1w*nii.gz" | xargs -n 1 -P 3 pydeface
+```
+It is set to 3 subjects in this example. If there are many subjects you can adjust the number of participants you want to process in parallel by increasing the `-P 3` argument, but be mindfull of your storm usage.
+
+After, you can overwrite the original T1w with the defaced version as we don't need the regular ones anymore:
+```
+find bids -name "*_defaced.nii.gz" | while IFS= read -r defaced; do
+  original="${defaced/_defaced/}"
+  mv "$defaced" "$original"
+done
+```
+**Note to self: figure out if defacer also defaces the functional data**
