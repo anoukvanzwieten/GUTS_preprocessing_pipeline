@@ -3,7 +3,7 @@
 Because the skull stripping software that halfpipe and fmriprep use (e.g., ANTS) do not work well on our data, we use [Synthstrip](https://surfer.nmr.mgh.harvard.edu/docs/synthstrip/) instead. For this step, we are working in 2 locations:
 
 ### Location 1: /dataGUTS2/path/to/your/data/folder
-`dataGUTS2` is our privacy-protected storage mount, and the location where our data is BIDS dataset is stored. It is important that we have a subjects_list_tobestripped.txt file containing the subject IDs of the subjects we want to skullstrip. If it does not yet exist, create one with `touch subjects_list_tobestripped.txt` and adjust it with `nano subjects_list_tobestripped.txt`. After entering the subjects, write them out with `^O`, press enter if you are happy with the file name, and exit with `^X`. Each subject should have its own row:
+`dataGUTS2` is our privacy-protected storage mount, and the location where our data is BIDS dataset is stored. It is important that we have a subject_list_tobestripped.txt file containing the subject IDs of the subjects we want to skullstrip. If it does not yet exist, create one with `touch subject_list_tobestripped.txt` and adjust it with `nano subject_list_tobestripped.txt`. After entering the subjects, write them out with `^O`, press enter if you are happy with the file name, and exit with `^X`. Each subject should have its own row:
 ```
 sub-gutsaumc0001
 sub-gutsaumc0002
@@ -57,7 +57,7 @@ while read -r sub; do
     # Overwrite T1w with skull-stripped version
     mv "$stripped" "$orig"
 
-done < subjects_list_tobestripped.txt
+done < subject_list_tobestripped.txt
 ```
 
 **Before / After:**
