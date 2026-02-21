@@ -26,7 +26,7 @@ The reason you might want to do this is because the paths in our files are speci
 - `ANTSPATH` → *(path to N4BiasFieldCorrection location)*
 
 **in `launch_skullstrip.sh`, adjust**
-- `subject_list`
+- `subject_list`→ *(path to subjects_list_tobestripped.txt)*
 - `root`
 
 After the paths are correct, can run the program (from wherever you have the synthstrip files in data00):
