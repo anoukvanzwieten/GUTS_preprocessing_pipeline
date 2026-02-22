@@ -11,7 +11,7 @@ The information is ordered chronologically:
 | 01 | [Data transfer yoda](01_data_transfer_yoda.md): creating a data password and using the ibridges GUI to import the data from yoda into storm. Specifies which format to use.   |
 | 02 | [Bids](02_bids.md): using bidsmapper, coiner and validator to create bids compliant data structure. Includes deface plugin. |
 | 03 | [Skullstrip](03_skullstrip_synthstrip.md): skullstripping with synthstrip |
-| 04 | [Fixing of slicetimings in jsons](04_slicetimings_in_jsons.md) | Adding the slice aquisition times in the jsons for later slice timing correction.
+| 04 | [Fixing of slicetimings in jsons](04_slicetimings_in_jsons.md): Adding the slice aquisition times in the jsons for later slice timing correction. |
 | 05 | Fmriprep: preprocessing data with fmriprep *(to be created)* |
 | 06 | GLM with FSL *(to be created?)* |
 
