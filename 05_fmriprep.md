@@ -1,7 +1,7 @@
 ## fmriprep
 ------------- THIS PIPELINE IS STILL IN CONSTRUCTION -------------
 
-Since we are still working out the details of our pipeline, I have added the fmriprep command in a shell file in data00/GUTS/anouk/code:
+Note that we are still working out the details of our pipeline. The current setup is created to run without skull stripping, as we are inputing our already skullstripped T1 files. If you want to use a raw T1 file, remove the `--skull-strip-t1w skip \` line from the code. 
 
 ```
 #!/bin/bash
