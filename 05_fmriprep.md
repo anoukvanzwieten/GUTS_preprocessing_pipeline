@@ -14,11 +14,11 @@ fmriprep-docker ${root}/bids ${root}/derivative_original participant \
     --nprocs 30 \
     --omp-nthreads 8 \
     --slice-time-ref 0.5 \
-    --output-spaces MNI152NLin2009cAsym:res-3 \
     --fs-license-file /usr/local/freesurfer/license.txt \
     --skull-strip-t1w skip \
     2>&1 | tee "$LOGDIR/fmriprep_$(date +%Y%m%d_%H%M).log"
 ```
+NOTE: We used to have `    --output-spaces MNI152NLin2009cAsym:res-3 \` in the code as well, this is removed for now as it broke the code. Without specifying, fmriprep still runs the correct MNI space but not with the correct dimensions (3x3x3).
 
 If you are creating it yourself, make it excecutable with `chmod +x` and check if it worked through `ls -la`. 
 To start fmriprep, run the following command:
