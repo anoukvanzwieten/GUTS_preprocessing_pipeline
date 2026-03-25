@@ -170,4 +170,4 @@ find bids -name "*_defaced.nii.gz" | while IFS= read -r defaced; do
   mv "$defaced" "$original"
 done
 ```
-**Note to self: figure out if defacer also defaces the functional data**
+
