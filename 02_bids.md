@@ -24,7 +24,7 @@ PARREC/
 Unfortunately this is not the structure that we have. For now, the data from yoda is formatted like this:
 ```
 ├── sub-gutsaumc0001
-│   ├── session-1
+│   ├── session_1
 │   │   ├── anat
 │   │   │    ├── [some PARREC files here]
 │   │   ├── beh
@@ -46,11 +46,11 @@ for sub in sub-*; do
   mkdir -p ../BEHAV/$sub/ses-01
 
   # move PARREC files
-  mv "$sub/session-1/anat/"* ../PARREC/$sub/ses-01/
-  mv "$sub/session-1/func/"* ../PARREC/$sub/ses-01/
+  mv "$sub/session_1/anat/"* ../PARREC/$sub/ses-01/
+  mv "$sub/session_1/func/"* ../PARREC/$sub/ses-01/
 
   # move behavior files
-  mv "$sub/session-1/beh/"* ../BEHAV/$sub/ses-01/
+  mv "$sub/session_1/beh/"* ../BEHAV/$sub/ses-01/
 done
 ```
 With this code we move all files into a BIDS-compatible structure (`ses-01`) inside the PARREC folder.
