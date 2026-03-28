@@ -25,7 +25,7 @@ To start fmriprep, run the following command:
 ```
 tmux new -s fmriprep
 source ~/venv_fmri_preproc/bin/activate
-./run_fmriprep.sh
+./run_fmriprep.sh launch_fmriprep_noMNI [subj numbers]
 ```
 
 `tmux` is a terminal session manager that allows us to keep the process alive, even when we are not connected to the server.
