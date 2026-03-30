@@ -36,3 +36,8 @@ After you are finished, kill the terminal session using
 ```
 tmux kill-session -t fmriprep
 ```
+
+To copy from /data00 to /dataGUTS2:
+```
+rsync -rLv source/ destination/
+```
