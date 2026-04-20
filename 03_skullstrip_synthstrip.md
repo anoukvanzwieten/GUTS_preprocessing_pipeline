@@ -1,4 +1,5 @@
 ## Skull stripping with Synthstrip
+--- Note: Add .bidsignore --------------------
 
 Because the skull stripping software that halfpipe and fmriprep use (e.g., ANTS) do not work well on our data, we use [Synthstrip](https://surfer.nmr.mgh.harvard.edu/docs/synthstrip/) instead. For this step, we are working in 2 locations:
 
@@ -65,5 +66,7 @@ done < subject_list_tobestripped.txt
 | Before | After |
 |--------|-------|
 | `sub-gutsaumc0002_ses-01_N4_brain.nii.gz` | `sub-gutsaumc0002_ses-01_T1w.nii.gz` |
+
+
 
 
