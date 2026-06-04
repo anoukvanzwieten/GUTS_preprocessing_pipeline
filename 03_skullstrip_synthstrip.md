@@ -42,7 +42,7 @@ fMRIPrep expects input directories that comply with the BIDS structure. This cre
 To use the skull-stripped T1 images as input, we rename the **skull-stripped images** to the original BIDS T1w filenames. This allows fMRIPrep to read the skull-stripped images as if they were the originals. The original T1w images are still there with the `_RAW` suffix for backup.
 
 ```bash
-BIDS_DIR=/dataGUTS2/GUTS/WP3/Data_collection/carmen_anouk/bids
+BIDS_DIR=/dataGUTS2/GUTSWP3/Data_collection/carmen_anouk/bids
 
 while read -r sub; do
 

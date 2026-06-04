@@ -61,7 +61,7 @@ import os
 import glob
 
 # Base directory: adjust if necessary
-base_dir = "/dataGUTS2/GUTS/WP3/Data_collection/carmen_anouk/bids/"
+base_dir = "/dataGUTS2/GUTSWP3/Data_collection/carmen_anouk/bids/"
 
 # Find all bold JSONs
 jsons = glob.glob(os.path.join(base_dir, 'sub*', '**', 'func', '*_task-*_bold.json'), recursive=True)

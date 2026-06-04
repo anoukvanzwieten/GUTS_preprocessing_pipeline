@@ -38,7 +38,7 @@ to take the behavior files and put them outside of the subject folder, so we pla
 
 The code to change these is here:
 ```
-cd /dataGUTS2/GUTS/WP3/Data_collection/carmen_anouk/yoda
+cd /dataGUTS2/GUTSWP3/Data_collection/carmen_anouk/yoda
 
 for sub in sub-*; do
   # create correct destination folder
@@ -57,7 +57,7 @@ With this code we move all files into a BIDS-compatible structure (`ses-01`) ins
 
 Now (after checking if the move went as planned) we can remove the (empty) subject folder from the yoda folder
 ```
-cd /dataGUTS2/GUTS/WP3/Data_collection/carmen_anouk/yoda
+cd /dataGUTS2/GUTSWP3/Data_collection/carmen_anouk/yoda
 rm -r [SUBJECT]
 ```
 
@@ -79,7 +79,7 @@ pip install bidscoin
 **Using bidsmapper**
 In the terminal, go to the folder with the bids, PARREC and BEHAV folders. In our case this is 
 ```
-cd /dataGUTS2/GUTS/WP3/Data_collection/carmen_anouk
+cd /dataGUTS2/GUTSWP3/Data_collection/carmen_anouk
 bidsmapper PARREC/ bids/
 ```
 Bidsmapper will open a screen. 
@@ -103,7 +103,7 @@ bidscoiner PARREC/ bids/
 ```
 The structure should now look like this:
 ```
-/dataGUTS2/GUTS/WP3/Data_collection/carmen_anouk/bids$ tree -L 4
+/dataGUTS2/GUTSWP3/Data_collection/carmen_anouk/bids$ tree -L 4
 .
 ├── code
 │   └── bidscoin

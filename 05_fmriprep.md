@@ -6,7 +6,7 @@ Note that we are still working out the details of our pipeline. The current setu
 ```
 #!/bin/bash
 
-root="/dataGUTS2/GUTS/WP3/Data_collection/carmen_anouk/tmp"
+root="/dataGUTS2/GUTSWP3/Data_collection/carmen_anouk/tmp"
 LOGDIR="/data00/GUTS/anouk/logs/fmriprep"
 mkdir -p "$LOGDIR"
 
