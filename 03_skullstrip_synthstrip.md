@@ -21,18 +21,18 @@ cp -r /data00/GUTS/anouk/code/synthstrip/ path/to/your/destination/folder
 ```
 The reason you might want to do this is because the paths in our files are specified for our data (e.g., `Data_collection/carmen_anouk`. If you are working in your own path, you need to adjust a few settings:
 
-**in `do_skullstrip.sh`, you should adjust:**
+**in `do_synthstrip.sh`, you should adjust:**
 - `orig_root`
 - `dest_root`
 - `ANTSPATH` → *(path to N4BiasFieldCorrection location)*
 
-**in `launch_skullstrip.sh`, adjust**
+**in `launch_synthstrip.sh`, adjust**
 - `subject_list`→ *(path to subjects_list_tobestripped.txt)*
 - `root`
 
 After the paths are correct, can run the program (from wherever you have the synthstrip files in data00):
 ```
-./launch_skullstrip.sh
+./launch_synthstrip.sh
 ```
 
 ### Renaming the skull stripped images for fmriprep
